@@ -1,5 +1,6 @@
 package org.main.loginTeleporter;
 
+import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import org.bukkit.Bukkit;
@@ -23,6 +24,7 @@ public class LoginTeleporter extends JavaPlugin implements Listener, CommandExec
     public void onEnable() {
         Bukkit.getPluginManager().registerEvents(this, this);
         this.getCommand("loatp").setExecutor(this);
+        this.getLogger().info(ChatColor.GREEN+"Enabled"+ ChatColor.LIGHT_PURPLE+" LoginTeleporter");
     }
 
     @EventHandler
@@ -49,5 +51,11 @@ public class LoginTeleporter extends JavaPlugin implements Listener, CommandExec
             }
         }
         return false;
+    }
+
+    @Override
+    public void onDisable()
+    {
+        this.getLogger().info(ChatColor.RED+"Disabled"+ ChatColor.LIGHT_PURPLE+" LoginTeleporter");
     }
 }
