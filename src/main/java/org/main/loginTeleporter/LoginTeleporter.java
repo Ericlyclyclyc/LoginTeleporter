@@ -59,3 +59,4 @@ public class LoginTeleporter extends JavaPlugin implements Listener, CommandExec
         this.getLogger().info(ChatColor.RED+"Disabled"+ ChatColor.LIGHT_PURPLE+" LoginTeleporter");
     }
 }
+//initializations

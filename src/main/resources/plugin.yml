@@ -3,3 +3,11 @@ version: '1.0-SNAPSHOT'
 main: org.main.loginTeleporter.LoginTeleporter
 api-version: '1.20'
 load: STARTUP
+commands:
+  loatp:
+    description: 设置当前地点为传送点
+    usage: /loatp
+permissions:
+  teleport.set:
+    description: 允许玩家设置传送点
+    default: op
